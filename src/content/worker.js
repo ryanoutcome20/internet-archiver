@@ -1,4 +1,3 @@
-
 function Output(text) {
     console.log("IA - > ", text);
 }

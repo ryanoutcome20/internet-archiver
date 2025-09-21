@@ -1,0 +1,68 @@
+<head> 
+    <link rel="stylesheet" href="../css/popup.css" />
+</head> 
+
+<body> 
+    <div class="option-group"> 
+        <input type="checkbox" id="enabled" name="enabled" value="enabled" />
+        <label for="enabled">Enabled</label>
+    </div>
+
+    <div class="option-group"> 
+        <input type="checkbox" id="auth" name="auth" value="auth" />
+        <label for="auth">Using <a href="https://archive.org/account/s3.php" target="_blank">Authenticator Headers</a></label>
+    </div>
+    
+    <div class="option-group">
+        <label for="key">Access Key:</label>
+        <input type="text" id="key" name="key">
+    </div>
+
+    <div class="option-group">
+        <label for="secret">Secret Key:</label>
+        <input type="text" id="secret" name="secret">
+    </div>
+
+    <div class="option-group">
+        <span>Capture Options:</span>
+
+        <div>
+            <input type="checkbox" id="outlinks" name="capture" value="outlinks">
+            <label for="outlinks">Capture outlinks</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="all" name="capture" value="all">
+            <label for="all">Capture all</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="screenshot" name="capture" value="screenshot">
+            <label for="screenshot">Capture screenshot</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="adblocker" name="capture" value="adblocker">
+            <label for="adblocker">Disable Adblocker</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="mywarc" name="capture" value="mywarc">
+            <label for="mywarc">Save to personal web-archive collection</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="email_results" name="capture" value="email_results">
+            <label for="email_results">Send the results to my email</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="email_archive" name="capture" value="email_archive">
+            <label for="email_archive">Send the download link of the archived page to my email</label>
+        </div>
+    </div>
+
+    <button id="saveBtn">Save Changes</button>
+
+    <script src="../content/popup.js"></script>
+</body>

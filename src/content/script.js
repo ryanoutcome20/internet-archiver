@@ -1,7 +1,3 @@
-var USING_AUTH = true
-var ACCESS_KEY = "Ux62RxOK8v4RikEc"
-var SECRET_KEY = "LaqCJyG0c2bVtDRa"
-
 function Output(text) {
     console.log("IA - > ", text);
 }

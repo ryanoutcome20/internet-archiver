@@ -62,6 +62,27 @@
         </div>
     </div>
 
+    <div class="option-group">
+        <span>Blacklist Options:</span>
+
+        <div style="margin-bottom: 2.5%; margin-top: 2.5%;">
+            <table id="blacklistTable">
+                <thead>
+                </thead>
+                <tbody> 
+                    <tr>
+                        <td contenteditable="true">.*spam\.site.*</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <input type="text" id="regexInput" placeholder="/^([a-z0-9]{5,})$/">
+            <button id="blacklistBtn">Add</button>
+        </div>
+    </div>
+
     <button id="saveBtn">Save Changes</button>
 
     <script src="../content/popup.js"></script>

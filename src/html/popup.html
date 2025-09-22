@@ -9,18 +9,22 @@
     </div>
 
     <div class="option-group"> 
-        <input type="checkbox" id="auth" name="auth" value="auth" />
-        <label for="auth">Using <a href="https://archive.org/account/s3.php" target="_blank">Authenticator Headers</a></label>
-    </div>
-    
-    <div class="option-group">
-        <label for="key">Access Key:</label>
-        <input type="text" id="key" name="key">
-    </div>
+        <span>Authentication Header Options:</span>
 
-    <div class="option-group">
-        <label for="secret">Secret Key:</label>
-        <input type="text" id="secret" name="secret">
+        <div>
+            <input type="checkbox" id="auth" name="auth" value="auth" />
+            <label for="auth">Using <a href="https://archive.org/account/s3.php" target="_blank">Authenticator Headers</a></label>
+        </div>
+        
+        <div>
+            <label for="key">Access Key:</label>
+            <input type="text" id="key" name="key">
+        </div>
+
+        <div>
+            <label for="secret">Secret Key:</label>
+            <input type="text" id="secret" name="secret">
+        </div>
     </div>
 
     <div class="option-group">

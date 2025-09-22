@@ -32,7 +32,7 @@ function loadSettings() {
                 const cell2 = newRow.insertCell(1);
 
                 const delBtn = document.createElement("button");
-                delBtn.textContent = "X";
+                delBtn.textContent = "Remove";
                 delBtn.className = "deleteBtn";
                 delBtn.addEventListener("click", () => {
                     newRow.remove();
@@ -77,7 +77,7 @@ function addRow() {
 
         var cell2 = newRow.insertCell(1);
         var delBtn = document.createElement("button");
-        delBtn.textContent = "X";
+        delBtn.textContent = "Remove";
         delBtn.className = "deleteBtn";
         delBtn.onclick = function() { newRow.remove(); };
         cell2.appendChild(delBtn);
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll("#blacklistTable tbody tr").forEach(row => {
         var cell = row.insertCell(1);
         var delBtn = document.createElement("button");
-        delBtn.textContent = "X";
+        delBtn.textContent = "Remove";
         delBtn.className = "deleteBtn";
         delBtn.onclick = function() {
             row.remove();

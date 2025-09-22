@@ -2,6 +2,25 @@ function Output(text) {
     console.log("IA - > ", text);
 }
 
+async function checkBlacklist(blacklist) {
+    Output(blacklist)
+    
+    blacklist.forEach(inputstring => {
+        // https://stackoverflow.com/questions/874709/converting-user-input-string-to-regular-expression
+        var flags = inputstring.replace(/.*\/([gimy]*)$/, '$1');
+        var pattern = inputstring.replace(new RegExp('^/(.*?)/'+flags+'$'), '$1');
+        var regex = new RegExp(pattern, flags);
+
+        if (regex.test(window.location.href)) {
+            return true;
+        } else {
+            Output(`No match: ${regex}`)
+        }
+    })
+
+    return false;
+}
+
 async function getBody() {
     const data = await new Promise((resolve) => {
         chrome.storage.sync.get(['capture'], resolve);
@@ -41,11 +60,16 @@ Output("Loaded");
 
 
 (async () => {
-    const enabled = await new Promise((resolve) => {
-        chrome.storage.sync.get('enabled', resolve);
+    const data = await new Promise((resolve) => {
+        chrome.storage.sync.get(['enabled', 'blacklist'], resolve);
     });
 
-    if (!enabled.enabled) {
+    if (checkBlacklist(data.blacklist)) {
+        Output("Blacklisted!");
+        return;
+    }
+
+    if (!data.enabled) {
         Output("Disabled!");
         return;
     }

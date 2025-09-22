@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Internet Archiver",
     "description": "Automatically archives sites based on provided options.",
-    "version": "1.0",
+    "version": "1.0.0",
     "icons": {
         "16": "images/icon-16.png",
         "32": "images/icon-32.png",

@@ -46,7 +46,7 @@ async function getHeaders() {
     const headers = {
         "Accept": "application/json",
         "Content-Type": "application/x-www-form-urlencoded",
-        "User-Agent": "InternetArchiverExtension/1.0 (ryanoutcome20@gmail.com)"
+        "User-Agent": "InternetArchiverExtension/1.0 (ryanoutcome@gmail.com)"
     };
 
     if (data.auth) {
